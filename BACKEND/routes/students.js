@@ -36,24 +36,28 @@ router.route('/').get((req, res) => {
     }).catch((err) => {
         console.log(err);
     })
+
 })
 
 
 
 //get student by id
 router.route('/:id').get((req, res) => {
+    
     let id = req.params.id;
     Student.findById(id).then((student) => {
         res.json(student)
     }).catch((err) => {
         console.log(err);
     })
+
 })
 
 
 
 //delete student
 router.route('/delete/:id').delete(async (req, res) => {
+
     let id = req.params.id;
     await Student.findByIdAndDelete(id).then(() => {
         res.status(200).send({status: "Student deleted"});
@@ -61,6 +65,7 @@ router.route('/delete/:id').delete(async (req, res) => {
         console.log(err.message);
         res.status(500).send({status: "Error with deleting data", error: err.message});
     })
+
 })
 
 
@@ -68,6 +73,7 @@ router.route('/delete/:id').delete(async (req, res) => {
 
 //update student
 router.route('/update/:id').put(async (req, res) => {
+
     let id = req.params.id;
     const {stdID, name, age, phone} = req.body;
 
@@ -78,6 +84,7 @@ router.route('/update/:id').put(async (req, res) => {
         phone,
     }
 
+
     const update = await Student.findByIdAndUpdate
     (id, updateStudent).then(() => {
         res.status(200).send({status: "Student updated"});
@@ -85,6 +92,7 @@ router.route('/update/:id').put(async (req, res) => {
         console.log(err);
         res.status(500).send({status: "Error with updating data", error: err.message});
     })
+
 })
 
 
