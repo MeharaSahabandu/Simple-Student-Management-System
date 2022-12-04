@@ -9,7 +9,25 @@ router.route('/add').post((req, res) => {
     const name = req.body.name;
     const age = Number(req.body.age);
     const phone = Number(req.body.phone);
+
+    const newStudent = new Student({
+        stdID,
+        name,
+        age,
+        phone,
+    })
+
+    newStudent.save().then(() => {
+        res.json('Student added')
+    }).catch((err) => {
+        console.log(err);
+    })
+
 })
 
 
 //get all students
+
+
+
+module.exports= router;
