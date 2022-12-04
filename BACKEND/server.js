@@ -32,5 +32,5 @@ app.listen(PORT, () => {
 });
 
 
-
-// Import Routes
+const studentRouter = require('./routes/students.js');
+app.use('/students', studentRouter);
