@@ -33,3 +33,5 @@ app.listen(PORT,()=>{
     console.log(`Server is up and running on port number: ${PORT} !`);
 })
 
+const StudentRouter = require('./routes/students');
+
