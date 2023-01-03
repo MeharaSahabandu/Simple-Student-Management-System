@@ -9,13 +9,15 @@ router.route('/add').post((req, res) => {
     const stdID = req.body.stdID;
     const name = req.body.name;
     const age = Number(req.body.age);
-    const phone = Number(req.body.phone);
+    //const phone = Number(req.body.phone);
+    const gender = req.body.gender;
 
     const newStudent = new Student({
         stdID,
         name,
         age,
-        phone,
+        //phone,
+        gender
     })
 
     newStudent.save().then(() => {
@@ -75,13 +77,14 @@ router.route('/delete/:id').delete(async (req, res) => {
 router.route('/update/:id').put(async (req, res) => {
 
     let id = req.params.id;
-    const {stdID, name, age, phone} = req.body;
+    const {stdID, name, age,  gender} = req.body;
 
     const updateStudent = {
         stdID,
         name,
         age,
-        phone,
+        //phone,
+        gender
     }
 
 

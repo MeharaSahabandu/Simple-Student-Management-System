@@ -20,11 +20,13 @@ const studentSchema = new Schema({
         required: true,
     },
 
+    /*
     phone:{
         type: Number,
         required: true,
         maxSize: 10,
     },
+*/
 
     gender:{
         type: String,
