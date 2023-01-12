@@ -34,9 +34,9 @@ app.listen(PORT,()=>{
 })
 
 
-const studentRouter = require('./routes/students');
+const studentRouter = require('./routes/student');
 
-app.use('/students', studentRouter);
+app.use('/student', studentRouter);
 
 
 
