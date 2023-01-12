@@ -60,29 +60,6 @@ router.route('/update/:id').put(async (req, res) => {
 })
 
 
-/*
-router.route("/update/:id").put(async (req, res)=>{
-    let userId = req.params.id;
-    const {name,NIC,address,contactnumber,Position,username,password} = req.body;
-
-    const updateEmployee = {
-        name,
-        NIC,
-        address,
-        contactnumber,
-        Position,
-        username,
-        password
-    }
-
-    const update = await Employee.findByIdAndUpdate(userId,updateEmployee).then(()=>{
-        res.status(200).send({status: "User Updated"})
-    }).catch((err)=>{
-        console.log(err);
-        res.status(500).send({status: "Error with updating data", error: err.message});
-    })
-})*/
-
 
 //delete data
 router.route('/delete/:id').delete(async (req, res) => {
