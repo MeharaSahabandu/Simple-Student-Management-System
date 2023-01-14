@@ -7,7 +7,7 @@ const dotenv = require ('dotenv');
 require ('dotenv').config();
 
 
-// DB Config
+// DB Config//
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
