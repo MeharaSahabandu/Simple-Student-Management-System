@@ -6,7 +6,7 @@ function Header() {
 
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <b class="navbar-brand" href="#" style={{ color: "red" }}>Student-Management</b>
+                <b class="navbar-brand" href="#" style={{ color: "blue" }}>Student-Management</b>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
