@@ -13,9 +13,14 @@ import './css/AddStudent.css'
 function App() {
   return (
 
-    <Routes>
-      <Header />
-    </Routes>
+    <Router>
+      <div>
+        <Routes>
+        <Route path='/' element={<><Header/></>}/>
+          <Route path='/add' element={<><Header/><AddStudent/></>}/>
+        </Routes>
+      </div>
+    </Router>
 
   );
 }
