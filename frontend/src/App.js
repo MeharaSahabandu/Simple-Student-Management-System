@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 
 //import components
@@ -12,11 +13,9 @@ import './css/AddStudent.css'
 function App() {
   return (
 
-    <div>
+    <Routes>
       <Header />
-      <AddStudent />
-    </div>
-
+    </Routes>
 
   );
 }
