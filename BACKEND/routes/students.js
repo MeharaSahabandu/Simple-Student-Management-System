@@ -9,14 +9,12 @@ router.route('/add').post((req, res) => {
     const stdID = req.body.stdID;
     const name = req.body.name;
     const age = Number(req.body.age);
-    //const phone = Number(req.body.phone);
     const gender = req.body.gender;
 
     const newStudent = new Student({
         stdID,
         name,
         age,
-        //phone,
         gender
     })
 
