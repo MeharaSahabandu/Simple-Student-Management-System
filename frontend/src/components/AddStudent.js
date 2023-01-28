@@ -3,6 +3,23 @@ import React, { useState } from "react";
 
 export default function AddStudent() {
 
+    const [name,setName] = useState('');
+    const [gender,setGender] = useState('');
+    const [age,setAge] = useState('');
+
+    function sendData(e){
+        e.preventDefault();
+
+        const newStudent ={
+            name,
+            gender, 
+            age
+        }
+
+        console.log(newStudent);
+    }
+    
+
     return (
 
         <div>
@@ -17,23 +34,30 @@ export default function AddStudent() {
 
             <div className="addStudent">
 
-            <form >
+            <form onSubmit={sendData}>
 
                 <div class="form-group">
                     <label for="exampleInputName">Name </label>
-                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Full Name"></input> 
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Full Name"
+                    onChange={(e)=>{
+                        setName(e.target.value);
+                    }}></input> 
                 </div>
                 <br></br>
 
                 <div class="form-group">
                     <label for="exampleInputGender">Gender</label>
-                    <input type="text" class="form-control" id="exampleInputGender" placeholder="Gender"></input>
+                    <input type="text" class="form-control" id="exampleInputGender" placeholder="Gender" onChange={(e)=>{
+                        setGender(e.target.value);
+                    }}></input>
                 </div>
                 <br></br>
-                
+
                 <div class="form-group">
                     <label for="exampleInputAge">Age</label>
-                    <input type="text" class="form-control" id="exampleInputAge" placeholder="Age"></input>
+                    <input type="text" class="form-control" id="exampleInputAge" placeholder="Age" onChange={(e)=>{
+                        setAge(e.target.value);
+                    }}></input>
                 </div>
 
                 <br></br>
