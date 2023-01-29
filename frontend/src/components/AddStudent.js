@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 
 export default function AddStudent() {
@@ -16,7 +17,14 @@ export default function AddStudent() {
             age
         }
 
-        console.log(newStudent);
+        
+        axios.post("http://localhost:8070/student/add",newStudent).then(()=>{
+            alert("Student Added");
+        }).catch((err)=>{
+            alert(err);
+        })
+        
+
     }
     
 
