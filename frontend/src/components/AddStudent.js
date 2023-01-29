@@ -5,38 +5,38 @@ import { useNavigate } from "react-router-dom";
 
 export default function AddStudent() {
 
-    const [name,setName] = useState('');
-    const [gender,setGender] = useState('');
-    const [age,setAge] = useState('');
+    const [name, setName] = useState('');
+    const [gender, setGender] = useState('');
+    const [age, setAge] = useState('');
 
     const navigate = useNavigate();
 
-    
 
-    function sendData(e){
+
+    function sendData(e) {
         e.preventDefault();
 
-        const newStudent ={
+        const newStudent = {
             name,
-            gender, 
+            gender,
             age
         }
 
-        
-        axios.post("http://localhost:8070/student/add",newStudent).then(() => {
-			navigate('/')
 
-		}).then(() => {
+        axios.post("http://localhost:8070/student/add", newStudent).then(() => {
+            navigate('/')
 
-			alert("Student Added Successfully")
-        }).catch((err)=>{
+        }).then(() => {
+
+            alert("Student Added Successfully")
+        }).catch((err) => {
             alert(err);
         })
-  
-        
+
+
 
     }
-    
+
 
     return (
 
@@ -52,37 +52,40 @@ export default function AddStudent() {
 
             <div className="addStudent">
 
-            <form onSubmit={sendData}>
+                <form onSubmit={sendData}>
 
-                <div class="form-group">
-                    <label for="exampleInputName">Name </label>
-                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Full Name"
-                    onChange={(e)=>{
-                        setName(e.target.value);
-                    }}></input> 
-                </div>
-                <br></br>
+                    <div class="form-group">
+                        <label for="exampleInputName">Name </label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Full Name"
+                            onChange={(e) => {
+                                setName(e.target.value);
+                            }}></input>
+                    </div>
+                    <br></br>
 
-                <div class="form-group">
-                    <label for="exampleInputGender">Gender</label>
-                    <input type="text" class="form-control" id="exampleInputGender" placeholder="Gender" onChange={(e)=>{
-                        setGender(e.target.value);
-                    }}></input>
-                </div>
-                <br></br>
+                    <div class="form-group">
+                        <label for="exampleInputGender">Gender</label>
+                        
+                        <select class="form-control form-control-sm">
+                        <option placeholder="Gender">--</option>
+                            <option placeholder="Gender">Female</option>
+                            <option placeholder="Gender">Male</option>
+                        </select>
+                    </div>
+                    <br></br>
 
-                <div class="form-group">
-                    <label for="exampleInputAge">Age</label>
-                    <input type="text" class="form-control" id="exampleInputAge" placeholder="Age" onChange={(e)=>{
-                        setAge(e.target.value);
-                    }}></input>
-                </div>
+                    <div class="form-group">
+                        <label for="exampleInputAge">Age</label>
+                        <input type="text" class="form-control" id="exampleInputAge" placeholder="Age" onChange={(e) => {
+                            setAge(e.target.value);
+                        }}></input>
+                    </div>
 
-                <br></br>
+                    <br></br>
 
-                <center><button type="submit" class="btn btn-primary">Submit</button></center>
+                    <center><button type="submit" class="btn btn-primary">Submit</button></center>
 
-            </form>
+                </form>
 
             </div>
 
