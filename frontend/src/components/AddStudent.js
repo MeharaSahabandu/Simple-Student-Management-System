@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 export default function AddStudent() {
@@ -7,6 +8,10 @@ export default function AddStudent() {
     const [name,setName] = useState('');
     const [gender,setGender] = useState('');
     const [age,setAge] = useState('');
+
+    const navigate = useNavigate();
+
+    
 
     function sendData(e){
         e.preventDefault();
@@ -18,11 +23,16 @@ export default function AddStudent() {
         }
 
         
-        axios.post("http://localhost:8070/student/add",newStudent).then(()=>{
-            alert("Student Added");
+        axios.post("http://localhost:8070/student/add",newStudent).then(() => {
+			navigate('/')
+
+		}).then(() => {
+
+			alert("Student Added Successfully")
         }).catch((err)=>{
             alert(err);
         })
+  
         
 
     }
