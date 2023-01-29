@@ -4,6 +4,13 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #e4def9;
+    background-color: rgb(175, 213, 247);
 }
 
+
+body {
+    background-color: #e4def9;
+  }
+
+
+  

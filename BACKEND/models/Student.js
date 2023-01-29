@@ -11,7 +11,7 @@ const StudentSchema = new Schema({
 
     gender:{
         type: String,
-        required: true
+        
     },
 
     age:{

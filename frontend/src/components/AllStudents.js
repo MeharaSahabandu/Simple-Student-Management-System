@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function AllStudents() {
 
+    const [students, setStudents] = useState([]);
+
     return (
         <div>
             <center>
