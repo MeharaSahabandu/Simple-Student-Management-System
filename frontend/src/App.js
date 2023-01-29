@@ -9,6 +9,7 @@ import AllStudents from './components/AllStudents';
 
 //css
 import './css/AddStudent.css'
+import './css/AllStudents.css'
 
 
 function App() {
