@@ -45,7 +45,7 @@ export default function AddStudent() {
             <br></br><br></br>
 
             <center>
-                <h3>ADD STUDENT</h3>
+                <h3>ADD NEW STUDENT</h3>
                 <br></br>
             </center>
 
