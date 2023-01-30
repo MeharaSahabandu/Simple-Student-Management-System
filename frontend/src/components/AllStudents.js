@@ -20,7 +20,7 @@ export default function AllStudents() {
         <div>
             <center>
                 <br></br>
-                <h2>All Students</h2>
+                <h2>ALL STUDENTS</h2>
                 <br></br>
             </center>
 
