@@ -22,7 +22,7 @@ function Header() {
                             <a class="nav-link" href="/add">Add-New</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">View-Student-Profile</a>
+                            <a class="nav-link" href="/viewProfile">View-Student-Profile</a>
                         </li>
 
                     </ul>

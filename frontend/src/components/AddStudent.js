@@ -66,9 +66,9 @@ export default function AddStudent() {
 
                     <div class="form-group">
                         <label for="exampleInputGender">Gender</label>
-                        
+
                         <select class="form-control form-control-sm">
-                        <option placeholder="Gender">--</option>
+                            <option placeholder="Gender">--</option>
                             <option placeholder="Gender">Female</option>
                             <option placeholder="Gender">Male</option>
                         </select>
