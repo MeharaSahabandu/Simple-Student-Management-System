@@ -19,7 +19,9 @@ export default function AllStudents() {
     return (
         <div>
             <center>
+                <br></br>
                 <h2>All Students</h2>
+                <br></br>
             </center>
 
             <center>
