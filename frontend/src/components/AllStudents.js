@@ -26,18 +26,18 @@ export default function AllStudents() {
                 <table border={1}>
                     <thead>
                         <tr className="topics">
-                            <th>Name</th>
-                            <th>Gender</th>
-                            <th>Age</th>
+                            <th className="nameT" >Name</th>
+                            <th className="nameT"> Gender</th>
+                            <th className="nameT">Age</th>
                         </tr>
                     </thead>
 
                     {students.map((data) => {
                         return (
-                            <tr>
-                                <td>{data.name}</td>
-                                <td>{data.gender}</td>
-                                <td>{data.age}</td>
+                            <tr >
+                                <td className="nameT">{data.name}</td>
+                                <td className="nameT">{data.gender}</td>
+                                <td className="nameT">{data.age}</td>
                             </tr>
                         )
                     })}
