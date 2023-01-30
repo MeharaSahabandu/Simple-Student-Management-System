@@ -83,7 +83,7 @@ export default function AddStudent() {
 
                     <br></br>
 
-                    <center><button type="submit" class="btn btn-primary">Submit</button></center>
+                    <center><button type="submit" class="btn" className="subB">Submit</button></center>
 
                 </form>
 
